@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import FunctionalGreeting from './components/FunctionalGreeting';
+import StatefulGreeting from './components/StatefulGreeting';
 
 function App() {
   return (
     <div className="App">
-      <FunctionalGreeting name="Warren" />
       <header className="App-header">
+        <FunctionalGreeting name="Warren" />
         <img src={logo} className="App-logo" alt="logo" />
+        <StatefulGreeting name="Wozza" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
