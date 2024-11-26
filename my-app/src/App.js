@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import FunctionalGreeting from './components/FunctionalGreeting';
 import StatefulGreeting from './components/StatefulGreeting';
+import HooksCounter from './components/HooksCounter';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <FunctionalGreeting name="Warren" />
         <img src={logo} className="App-logo" alt="logo" />
         <StatefulGreeting name="Wozza" />
+        <HooksCounter name="Warren" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
