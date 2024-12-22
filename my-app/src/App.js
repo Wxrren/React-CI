@@ -8,9 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <FunctionalGreeting name="Warren" />
         <img src={logo} className="App-logo" alt="logo" />
-        <StatefulGreeting name="Wozza" />
         <HooksCounter name="Warren" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
