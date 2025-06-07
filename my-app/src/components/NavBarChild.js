@@ -7,11 +7,18 @@ function NavBarChild(props) {
         :
         <form>
             <label htmlFor = "username">Username:</label>
-            <input placeholder="username" id="username"/>
+            <input 
+                value={props.name}
+                onChange={props.handleNameChange}
+                placeholder="username"
+                id="username"
+                name="username"
+                type="text"
+            />
         
             <label htmlFor = "password">Password:</label>
             <input placeholder="password" id="password"/>
-            <button  onClick={props.handleClick}>Submit</button>
+            <button type="submit" onClick={props.handleClick}>Submit</button>
         </form>
     )
 }

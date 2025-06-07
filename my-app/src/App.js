@@ -8,6 +8,7 @@ import Sidebar from './components/Sidebar';
 import NavBarForm from './components/NavBarForm';
 import EventsClass from './components/EventsClass';
 import Content from './components/Content';
+import NavBarChild from './components/NavBarChild';
 
 
 function App() {
