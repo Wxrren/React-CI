@@ -5,7 +5,7 @@ function NavBarChild(props) {
         props.isLoggedIn ?
         <button onClick={props.handleClick}>Login</button>
         :
-        <form>
+        <form onSubmit={props.handleClick}>
             <label htmlFor = "username">Username:</label>
             <input 
                 value={props.name}

@@ -17,12 +17,11 @@ export default class NavBarForm extends React.Component {
           isLoggedIn: prevState.isLoggedIn ? false: true
         }));
         console.log(this)
-        event.preventDefault();
       }
 
       handleNameChange = (event) => {
         this.setState({
-            name: event.target.value
+            name: event.target.value,
         });
     }
 
@@ -35,6 +34,7 @@ export default class NavBarForm extends React.Component {
                         isLoggedIn={this.state.isLoggedIn}
                         handleClick={this.handleClick}
                         handleNameChange={this.handleNameChange}
+                        name={this.state.name}
                     />
                 </div>
             </div>
