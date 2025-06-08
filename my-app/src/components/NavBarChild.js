@@ -17,7 +17,7 @@ function NavBarChild(props) {
             />
         
             <label htmlFor = "password">Password:</label>
-            <input placeholder="password" id="password"/>
+            <input type="password" placeholder="password" id="password"/>
             <button type="submit" onClick={props.handleClick}>Submit</button>
         </form>
     )

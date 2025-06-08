@@ -7,7 +7,9 @@ import Loader from "./Loader";
 export class Content extends Component {
     constructor(props) {
         super(props)
-        this.state = { isLoaded: false };
+        this.state = { isLoaded: false,
+                        posts: []
+         };
 
     }
 
@@ -15,6 +17,7 @@ export class Content extends Component {
         setTimeout(()=>{
             this.setState({
                 isLoaded: true,
+                posts: postsData.savedPosts
             })
         }, 2000)
     }
@@ -24,11 +27,30 @@ export class Content extends Component {
             <div className={css.Content}>
                 <div className={css.TitleBar}>
                     <h1>My Photos</h1>
+                    <form>
+                        <label htmlFor="search">Search</label>
+                        <input
+                            type="search"
+                            id="searchInput"
+                            name="search"
+                            placeholder="By Author"
+                            onChange={(event) => {
+                                const searchAuthor = event.target.value
+                                const filteredPosts = postsData.savedPosts.filter(post => {
+                                return post.name.toLowerCase().includes(searchAuthor.toLowerCase())
+                                })
+                                this.setState({
+                                posts: filteredPosts,
+                                })
+                            }}
+                        />
+                        <h4>Posts Found: {this.state.posts.length}</h4>
+                    </form>
                 </div>
                 <div className={css.SearchResults}>
                     {
                         this.state.isLoaded ?
-                        <PostItem savedPosts={postsData.savedPosts} />
+                        <PostItem savedPosts={this.state.posts} />
                         : <Loader />
                     }
                 </div>
